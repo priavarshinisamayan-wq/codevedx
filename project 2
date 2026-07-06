@@ -1,0 +1,26 @@
+# PROJECT 2 - Exploratory Data Analysis (EDA) using Python
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+    'Sales': [12000, 15000, 18000, 17000, 20000]
+}
+
+df = pd.DataFrame(data)
+
+print("Monthly Sales Data")
+print(df)
+
+print("\nMean Sales:", df['Sales'].mean())
+print("Maximum Sales:", df['Sales'].max())
+print("Minimum Sales:", df['Sales'].min())
+
+plt.plot(df['Month'], df['Sales'])
+
+plt.title("Monthly Sales Report")
+plt.xlabel("Month")
+plt.ylabel("Sales")
+
+plt.show()
